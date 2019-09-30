@@ -21,4 +21,5 @@
     <string name="btn_intent_object">Intent with Object</string>
     <string name="title_activity_intent_extras">IntentExtrasActivity</string>
     <string name="btn_back">Go Back</string>
+    <string name="btn_photo">Take a Picture</string>
 </resources>
