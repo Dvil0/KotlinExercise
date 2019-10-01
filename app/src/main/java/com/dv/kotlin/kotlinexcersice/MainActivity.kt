@@ -10,7 +10,6 @@ import com.dv.kotlin.kotlinexcersice.activities.*
 import com.dv.kotlin.kotlinexcersice.others.ToolbarActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
-import java.security.Permission
 
 class MainActivity : ToolbarActivity() {
 
@@ -111,7 +110,7 @@ class MainActivity : ToolbarActivity() {
     }
 
     private fun goToPermissionActivity(){
-        val intent = Intent( this, Permission::class.java )
+        val intent = Intent( this, PermissionActivity::class.java )
         startActivity( intent )
     }
 
