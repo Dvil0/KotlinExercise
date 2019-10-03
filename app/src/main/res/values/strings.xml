@@ -22,4 +22,11 @@
     <string name="title_activity_intent_extras">IntentExtrasActivity</string>
     <string name="btn_back">Go Back</string>
     <string name="btn_photo">Take a Picture</string>
+    <string name="lbl_name">Name</string>
+    <string name="lbl_age">Age</string>
+    <string name="btn_shared">Guardar</string>
+    <string name="ext_btn_toast">Toast</string>
+    <string name="ext_btn_snack">Snackbar</string>
+    <string name="ext_btn_load">Load by URL</string>
+    <string name="ext_btn_go">Go to Activity</string>
 </resources>

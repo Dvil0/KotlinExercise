@@ -8,11 +8,12 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import com.dv.kotlin.kotlinexcersice.R
 import com.dv.kotlin.kotlinexcersice.models.Person
+import com.dv.kotlin.kotlinexcersice.others.inflate
 import kotlinx.android.synthetic.main.listview_person.view.*
 
 class PersonAdapter( val context: Context, val list: List<Person>): BaseAdapter(){
 
-    private val mInflator : LayoutInflater = LayoutInflater.from( context )
+//    private val mInflator : LayoutInflater = LayoutInflater.from( context )
 
     override fun getItem( position: Int ): Any{
         return list[ position ]
@@ -27,13 +28,13 @@ class PersonAdapter( val context: Context, val list: List<Person>): BaseAdapter(
         return list.size
     }
 
-    override fun getView( position: Int, convertView: View?, parentGroup: ViewGroup? ): View{
+    override fun getView( position: Int, convertView: View?, parentGroup: ViewGroup ): View{
         val view: View
         val viewHolder: PersonViewHolder
 
         if( convertView == null ){
 
-            view = mInflator.inflate( R.layout.listview_person, parentGroup, false )
+            view = parentGroup.inflate( R.layout.listview_person )
             viewHolder = PersonViewHolder( view )
             view.tag = viewHolder
 

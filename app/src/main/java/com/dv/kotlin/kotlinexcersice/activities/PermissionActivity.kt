@@ -26,7 +26,22 @@ class PermissionActivity: ToolbarActivity() {
 
         toolbarToLoad(toolbar as Toolbar)
 
-        btnPhoto.setOnClickListener { getPictureFromCameraAskingPermissions() }
+//        btnPhoto.setOnClickListener { getPictureFromCameraAskingPermissions() }
+        btnPhoto.setOnClickListener { getPictureFromCamera() }
+    }
+
+    // Tomar foto sin permiso
+    private fun getPictureFromCamera(){
+        // Solo funciona con el activity de la camara.
+        // Asegurarse de que no hay permiso de camara en el manifest.
+        // Crear intent para capturar la foto
+        val pictureIntent = Intent( MediaStore.ACTION_IMAGE_CAPTURE )
+        // Comprobar que podemos manejar la captura de fotos ( Camara y App de Camara)
+        if( pictureIntent.resolveActivity( packageManager ) != null ){
+        startActivityForResult( pictureIntent, permissionCamera )
+        } else {
+            // No hay activity que soporte el intent. (Por ejemplo sin camara)
+        }
     }
 
     private fun getPictureFromCameraAskingPermissions() {
